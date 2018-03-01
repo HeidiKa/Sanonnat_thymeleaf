@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>sanonnat</title>
+    <link rel="stylesheet" href="tyyli.css" th:href="@{tyyli.css}"/>
+</head>
+<body>
+<h1>Kuuluisia elokuvalausahduksia</h1>
+
+<div>
+    <form th:action="@{/sanonnat}" th:object="${lomake}" method="post">
+        <div><label th:text="'Elokuvan nimi: '" th:for="elokuva"/> <input th:field="*{elokuva}"/></div>
+        <div><label th:text="'Sanonta: '" th:for="sanonta"/> <input th:field="*{sanonta}"/></div>
+        <div><input th:type="'submit'" th:value="'Lähetä'"/></div>
+    </form>
+</div>
+</body>
+</html>

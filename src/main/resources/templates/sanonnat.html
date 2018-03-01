@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>sanonnat</title>
+    <link rel="stylesheet" href="tyyli.css" th:href="@{tyyli.css}"/>
+</head>
+<body>
+<div>
+<h1>Kuuluisia elokuvalausahduksia</h1>
+<table>
+    <tr><th>Elokuva</th><th>Sanonta</th></tr>
+    <tr th:each="elokuva: ${sanonnat}">
+
+        <td th:text="${elokuva.elokuva}"></td>
+        <td th:text="${elokuva.sanonta}"></td>
+
+    </tr>
+</table>
+<p>
+</p>
+<p>
+    <button onclick="window.location.href='/lomake'">Lisää sanonta</button>
+</p>
+</div>
+
+
+</body>
+</html>

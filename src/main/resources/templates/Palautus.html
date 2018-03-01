@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Tiedot</title>
+    <link rel="stylesheet" href="tyyli.css" th:href="@{tyyli.css}"/>
+</head>
+<body>
+<h1>Otsikko</h1>
+<p th:text="|Nimi: ${elokuva.elokuva} , Salasana: ${elokuva.sanonta} |"/>
+
+
+</body>
+</html>
