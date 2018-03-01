@@ -10,9 +10,11 @@
 
 <div>
     <form th:action="@{/sanonnat}" th:object="${lomake}" method="post">
-        <div><label th:text="'Elokuvan nimi: '" th:for="elokuva"/> <input th:field="*{elokuva}"/></div>
-        <div><label th:text="'Sanonta: '" th:for="sanonta"/> <input th:field="*{sanonta}"/></div>
-        <div><input th:type="'submit'" th:value="'Lähetä'"/></div>
+        <table>
+        <td><label th:text="'Elokuvan nimi: '" th:for="elokuva"/> <input th:field="*{elokuva}"/></td>
+        <td><label th:text="'Sanonta: '" th:for="sanonta"/> <input th:field="*{sanonta}"/></td>
+        </table>
+        <p><input th:type="'submit'" th:value="'Lähetä'"/></p>
     </form>
 </div>
 </body>

@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Otsikko</h1>
-<p th:text="|Nimi: ${elokuva.elokuva} , Salasana: ${elokuva.sanonta} |"/>
+<form th:action="@{/sanonnat}" th:object="${lomake}" method="delete">
 
 
 </body>

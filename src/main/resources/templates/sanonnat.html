@@ -9,16 +9,14 @@
 <div>
 <h1>Kuuluisia elokuvalausahduksia</h1>
 <table>
-    <tr><th>Elokuva</th><th>Sanonta</th></tr>
+    <tr><th>Elokuva</th><th id="1">Sanonta</th></tr>
     <tr th:each="elokuva: ${sanonnat}">
 
-        <td th:text="${elokuva.elokuva}"></td>
+        <td th:text="${elokuva.elokuva}">rivi</td>
         <td th:text="${elokuva.sanonta}"></td>
 
     </tr>
 </table>
-<p>
-</p>
 <p>
     <button onclick="window.location.href='/lomake'">Lisää sanonta</button>
 </p>
